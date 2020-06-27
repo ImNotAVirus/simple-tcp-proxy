@@ -1,4 +1,4 @@
-defmodule NosbyteProxy.Application do
+defmodule ProxyEx.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -7,13 +7,13 @@ defmodule NosbyteProxy.Application do
 
   def start(_type, _args) do
     children = [
-      # Starts a worker by calling: NosbyteProxy.Worker.start_link(arg)
-      {NosbyteProxy.Worker, []}
+      # Starts a worker by calling: ProxyEx.Worker.start_link(arg)
+      {ProxyEx.Worker, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: NosbyteProxy.Supervisor]
+    opts = [strategy: :one_for_one, name: ProxyEx.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end

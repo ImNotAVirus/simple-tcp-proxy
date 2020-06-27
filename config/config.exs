@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure your application as:
 #
-#     config :nosbyte_proxy, key: :value
+#     config :proxy_ex, key: :value
 #
 # and access this configuration in your application as:
 #
-#     Application.get_env(:nosbyte_proxy, :key)
+#     Application.get_env(:proxy_ex, :key)
 #
 # You can also configure a third-party app:
 #
@@ -34,10 +34,10 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:application]
 
-config :nosbyte_proxy,
+config :proxy_ex,
   num_acceptors: 10,
   port: {:system, :integer, "PORT", 3000},
   # Comma separated (eg. `10.0.0.1:4002,10.0.0.2:4002,10.0.0.3:4002`)
-  backends: {:system, {NosbyteProxy.IP, :cast, []}, "BACKENDS", [{'127.0.0.1', 4002}]}
+  backends: {:system, {ProxyEx.IP, :cast, []}, "BACKENDS", [{'127.0.0.1', 4002}]}
 
 if Mix.env() in [:prod], do: import_config("#{Mix.env()}.exs")

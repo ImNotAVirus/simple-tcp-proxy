@@ -1,4 +1,4 @@
-defmodule NosbyteProxy.IPTest do
+defmodule ProxyEx.IPTest do
   use ExUnit.Case
-  doctest NosbyteProxy.IP
+  doctest ProxyEx.IP
 end

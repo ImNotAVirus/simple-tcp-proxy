@@ -1,4 +1,4 @@
-defmodule NosbyteProxy.Worker do
+defmodule ProxyEx.Worker do
   @moduledoc """
   TODO: Documentation
   """
@@ -8,12 +8,12 @@ defmodule NosbyteProxy.Worker do
   @doc false
   def child_spec(_opts) do
     listener_name = __MODULE__
-    num_acceptors = Application.fetch_env!(:nosbyte_proxy, :num_acceptors)
+    num_acceptors = Application.fetch_env!(:proxy_ex, :num_acceptors)
     transport = :ranch_tcp
-    port = Confex.fetch_env!(:nosbyte_proxy, :port)
+    port = Confex.fetch_env!(:proxy_ex, :port)
     transport_opts = [port: port]
-    protocol = NosbyteProxy.Protocol
-    backends = Confex.fetch_env!(:nosbyte_proxy, :backends)
+    protocol = ProxyEx.Protocol
+    backends = Confex.fetch_env!(:proxy_ex, :backends)
     protocol_opts = [backends: backends]
 
     Logger.info("Proxy server started on port #{port}")

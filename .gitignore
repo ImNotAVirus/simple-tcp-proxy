@@ -19,6 +19,7 @@
 !/apps/**/README.md
 !/lib/**/*.ex
 !/lib/**/*.exs
+!/test/**/*.exs
 
 # Additionals files
 !/.deliver/config

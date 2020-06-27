@@ -1,4 +1,4 @@
-defmodule NosbyteProxy.IP do
+defmodule ProxyEx.IP do
   @moduledoc """
   TODO: Documentation
   """
@@ -8,13 +8,13 @@ defmodule NosbyteProxy.IP do
 
   ## Examples
 
-    iex> NosbyteProxy.IP.cast("")
+    iex> ProxyEx.IP.cast("")
     {:ok, []}
 
-    iex> NosbyteProxy.IP.cast("10.0.0.1:4002")
+    iex> ProxyEx.IP.cast("10.0.0.1:4002")
     {:ok, [{'10.0.0.1', 4002}]}
 
-    iex> NosbyteProxy.IP.cast("10.0.0.1:4002,10.0.0.2:4002,10.0.0.3:4002")
+    iex> ProxyEx.IP.cast("10.0.0.1:4002,10.0.0.2:4002,10.0.0.3:4002")
     {:ok, [{'10.0.0.1', 4002}, {'10.0.0.2', 4002}, {'10.0.0.3', 4002}]}
   """
   @spec cast(String.t()) :: [{String.t(), non_neg_integer()}, ...]

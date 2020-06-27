@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-APP="nosbyte_proxy"
+APP="proxy_ex"
 
-BUILD_HOST="build.nosbyte_proxy.com"
+BUILD_HOST="build.proxy.com"
 BUILD_USER="builder"
-BUILD_AT="/tmp/edeliver/nosbyte_proxy/builds"
+BUILD_AT="/tmp/edeliver/proxy_ex/builds"
 
-STAGING_HOSTS="stage.nosbyte_proxy.com"
+STAGING_HOSTS="stage.proxy.com"
 STAGING_USER="staging"
 
-PRODUCTION_HOSTS="deploy1.nosbyte_proxy.com deploy2.nosbyte_proxy.com"
+PRODUCTION_HOSTS="deploy1.proxy.com deploy2.proxy.com"
 PRODUCTION_USER="production"
 DELIVER_TO="/home/user"

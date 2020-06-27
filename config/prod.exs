@@ -5,4 +5,4 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:application]
 
-config :nosbyte_proxy, num_acceptors: 40
+config :proxy_ex, num_acceptors: 40

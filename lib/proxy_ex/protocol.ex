@@ -1,4 +1,4 @@
-defmodule NosbyteProxy.Protocol do
+defmodule ProxyEx.Protocol do
   @moduledoc """
   TODO: Documentation
   """
