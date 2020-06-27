@@ -23,7 +23,9 @@ defmodule NosbyteProxy.MixProject do
   defp deps do
     [
       {:confex, "~> 3.4"},
-      {:ranch, "~> 1.7"}
+      {:ranch, "~> 1.7"},
+      {:edeliver, "~> 1.8"},
+      {:distillery, "~> 2.1", runtime: false}
     ]
   end
 end

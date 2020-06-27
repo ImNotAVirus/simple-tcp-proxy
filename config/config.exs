@@ -39,3 +39,5 @@ config :nosbyte_proxy,
   port: {:system, :integer, "PORT", 3000},
   # Comma separated (eg. `10.0.0.1:4002,10.0.0.2:4002,10.0.0.3:4002`)
   backends: {:system, {NosbyteProxy.IP, :cast, []}, "BACKENDS", [{'127.0.0.1', 4002}]}
+
+if Mix.env() in [:prod], do: import_config("#{Mix.env()}.exs")
